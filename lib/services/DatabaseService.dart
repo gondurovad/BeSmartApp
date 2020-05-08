@@ -24,7 +24,7 @@ class DatabaseService {
       await db.rawInsert("INSERT Into category (id,name,user_id,created_at,updated_at,deleted_at) VALUES (?,?,?,?,?,?)", [1, 'Дом', 1, new DateTime.now().toIso8601String(), '', '']);
       await db.rawInsert("INSERT Into category (id,name,user_id,created_at,updated_at,deleted_at) VALUES (?,?,?,?,?,?)", [2, 'Учеба', 1, new DateTime.now().toIso8601String(), '', '']);
       await db.rawInsert("INSERT Into category (id,name,user_id,created_at,updated_at,deleted_at) VALUES (?,?,?,?,?,?)", [3, 'Работа', 1, new DateTime.now().toIso8601String(), '', '']);
-      await db.rawInsert("INSERT Into category (id,name,user_id,created_at,updated_at,deleted_at) VALUES (?,?,?,?,?,?)", [3, 'Свободные 10 минут', 1, new DateTime.now().toIso8601String(), '', '']);
+      await db.rawInsert("INSERT Into category (id,name,user_id,created_at,updated_at,deleted_at) VALUES (?,?,?,?,?,?)", [4, 'Свободные 10 минут', 1, new DateTime.now().toIso8601String(), '', '']);
     });
   }
 }
