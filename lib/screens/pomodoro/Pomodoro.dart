@@ -4,11 +4,13 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:besmart/screens/pomodoro/PomodoroTimer.dart';
 
+// Класс - Виджет экран Pomodoro
 class Pomodoro extends StatefulWidget {
   @override
   _PomodoroState createState() => _PomodoroState();
 }
 
+// Класс состояния класса Pomodoro
 class _PomodoroState extends State<Pomodoro> {
 
   PomodoroTimer timer;
@@ -53,8 +55,7 @@ class _PomodoroState extends State<Pomodoro> {
         bottomNavigationBar: BeSmartBottomAppBar(),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         floatingActionButton: FloatingActionButton(
-            child:
-                timer.isRunning ? Icon(Icons.replay) : Icon(Icons.play_arrow),
+            child: timer.isRunning ? Icon(Icons.replay) : Icon(Icons.play_arrow),
             onPressed: timer.isRunning ? timer.reset : timer.start),
       );
 }

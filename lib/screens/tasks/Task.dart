@@ -10,16 +10,19 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:smart_select/smart_select.dart';
 
+// Класс - Виджет экран Task
 class Task extends StatefulWidget {
-  final String _id;
 
+  final String _id;
+  // Конструктор класса
   Task({String id}) : _id = id;
 
   @override
-  _TaskState createState() => _TaskState();
+  _Task createState() => _Task();
 }
 
-class _TaskState extends State<Task> {
+// Класс состояния класса Task
+class _Task extends State<Task> {
 
   var task = new TaskModel(id: null, name: null, deadlineDate: null, deadlineTime: null);
 

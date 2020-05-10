@@ -4,6 +4,8 @@ import 'package:besmart/models/CategoryModel.dart';
 import 'package:besmart/services/DatabaseService.dart';
 import 'package:sqflite/sqflite.dart';
 
+// Класс отвечающий за взаимодействие с таблицей category
+
 class CategoryService {
   CategoryService._();
 
@@ -46,6 +48,8 @@ class CategoryService {
 
   deleteById(int id) async {
     final db = await database;
-    return db.delete("category", where: "id = ?", whereArgs: [id]);
+    await db.rawUpdate("UPDATE project SET category_id = null WHERE category_id=?", [id]);
+    await db.rawUpdate("UPDATE task SET category_id = null WHERE category_id=?", [id]);
+    return db.rawDelete("DELETE FROM category WHERE id=?",[id]);
   }
 }

@@ -4,6 +4,8 @@ import 'package:besmart/models/NoteModel.dart';
 import 'package:besmart/services/DatabaseService.dart';
 import 'package:sqflite/sqflite.dart';
 
+// Класс отвечающий за взаимодействие с таблицей note
+
 class NoteService {
   NoteService._();
 
@@ -18,7 +20,7 @@ class NoteService {
     var table = await db.rawQuery("SELECT MAX(id)+1 as id FROM notes");
     int id = table.first["id"];
     var raw = await db.rawInsert(
-        "INSERT Into notes ("
+        "INSERT Into note ("
             "id,"
             "name,"
             "description,"
@@ -44,14 +46,14 @@ class NoteService {
   update(NoteModel item) async {
     final db = await database;
     var res = await db
-        .update("notes", item.toJson(), where: "id = ?", whereArgs: [item.id]);
+        .update("note", item.toJson(), where: "id = ?", whereArgs: [item.id]);
     return res;
   }
 
   Future<List<NoteModel>> getById(int id) async {
     final db = await database;
     var res = await db.rawQuery(
-        "SELECT * FROM notes WHERE id = ?", [id]);
+        "SELECT * FROM note WHERE id = ?", [id]);
     List<NoteModel> list =
     res.isNotEmpty ? res.map((c) => NoteModel.fromJson(c)).toList() : [];
     return list;
@@ -59,7 +61,7 @@ class NoteService {
 
   Future<List<NoteModel>> getAll() async {
     final db = await database;
-    var res = await db.rawQuery("SELECT * FROM notes");
+    var res = await db.rawQuery("SELECT * FROM note");
     List<NoteModel> list =
     res.isNotEmpty ? res.map((c) => NoteModel.fromJson(c)).toList() : [];
     return list;
@@ -68,7 +70,7 @@ class NoteService {
 
   deleteById(int id) async {
     final db = await database;
-    return db.delete("notes", where: "id = ?", whereArgs: [id]);
+    return db.delete("note", where: "id = ?", whereArgs: [id]);
   }
 
 }

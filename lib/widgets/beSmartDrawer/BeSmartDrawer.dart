@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+// Класс - Виджет боковое меню
+
 class BeSmartDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

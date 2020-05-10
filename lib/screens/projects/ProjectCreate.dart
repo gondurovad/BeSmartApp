@@ -8,20 +8,19 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:smart_select/smart_select.dart';
 
+// Класс - Виджет экран ProjectCreate
 class ProjectCreate extends StatefulWidget {
   @override
   _ProjectCreateState createState() => _ProjectCreateState();
 }
 
+// Класс состояния класса ProjectCreate
 class _ProjectCreateState extends State<ProjectCreate> {
 
   var project = new ProjectModel(id: null, name: null, deadlineAt: null);
 
   TextEditingController nameController = TextEditingController();
   TextEditingController descriptionController = TextEditingController();
-  TextEditingController dateTimeController = TextEditingController();
-
-  final projects = ProjectService.db.getAll();
 
   final _formKey = GlobalKey<FormState>();
 

@@ -6,11 +6,13 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 
+// Класс - Виджет экран NoteList
 class NoteList extends StatefulWidget {
   @override
   _NoteListState createState() => _NoteListState();
 }
 
+// Класс состояния класса NoteList
 class _NoteListState extends State<NoteList> {
 
   TextEditingController nameController = TextEditingController();

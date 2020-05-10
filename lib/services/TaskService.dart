@@ -4,6 +4,8 @@ import 'package:besmart/models/TaskModel.dart';
 import 'package:besmart/services/DatabaseService.dart';
 import 'package:sqflite/sqflite.dart';
 
+// Класс отвечающий за взаимодействие с таблицей task
+
 class TaskService {
   TaskService._();
 
@@ -52,6 +54,7 @@ class TaskService {
     return raw;
   }
 
+  // Выполнена не выполнена
   checkOrUncheck(TaskModel item) async {
     final db = await database;
     TaskModel model = TaskModel(

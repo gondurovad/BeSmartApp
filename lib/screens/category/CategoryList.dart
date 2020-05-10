@@ -5,11 +5,13 @@ import 'package:besmart/widgets/beSmartDrawer/BeSmartDrawer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 
+// Класс - Виджет экран CategoryList
 class CategoryList extends StatefulWidget {
   @override
   _CategoryListState createState() => _CategoryListState();
 }
 
+// Класс состояния класса CategoryList
 class _CategoryListState extends State<CategoryList> {
 
   TextEditingController nameController = TextEditingController();

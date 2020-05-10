@@ -6,7 +6,7 @@ import 'package:besmart/screens/habit/Habit.dart';
 import 'package:besmart/screens/habit/HabitCreate.dart';
 import 'package:besmart/screens/habit/HabitList.dart';
 import 'package:besmart/screens/home/Home.dart';
-import 'package:besmart/screens/notes/NoteList.dart';
+import 'package:besmart/screens/note/NoteList.dart';
 import 'package:besmart/screens/pomodoro/Pomodoro.dart';
 import 'package:besmart/screens/projects/Project.dart';
 import 'package:besmart/screens/projects/ProjectCreate.dart';
@@ -62,7 +62,6 @@ class BeSmart extends StatelessWidget {
             return new MaterialPageRoute(builder: (context) => new BadHabit(id: path[2]), settings: routeSettings);
         }
       },
-
       localizationsDelegates: [
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,

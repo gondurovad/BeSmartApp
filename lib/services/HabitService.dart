@@ -4,6 +4,8 @@ import 'package:besmart/models/HabitModel.dart';
 import 'package:besmart/services/DatabaseService.dart';
 import 'package:sqflite/sqflite.dart';
 
+// Класс отвечающий за взаимодействие с таблицей habit
+
 class HabitService {
   HabitService._();
 

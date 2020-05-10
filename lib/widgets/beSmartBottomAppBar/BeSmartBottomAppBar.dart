@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+// Класс - Виджет нижнее меню
+
 class BeSmartBottomAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

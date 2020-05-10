@@ -1,5 +1,4 @@
 import 'dart:convert';
-
 import 'package:flutter/cupertino.dart';
 
 BadHabitModel badHabitModelFromJson(String str) =>

@@ -12,11 +12,13 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
+// Класс - Виджет экран Home
 class Home extends StatefulWidget {
   @override
   _HomeState createState() => _HomeState();
 }
 
+// Класс состояния класса Home
 class _HomeState extends State<Home> {
 
   var deadlineDate = DateFormat('yyyy-MM-ddT00:00:00.000').format(DateTime.now());

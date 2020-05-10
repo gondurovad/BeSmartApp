@@ -8,17 +8,18 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:smart_select/smart_select.dart';
 
-
+// Класс - Виджет экран ProjectUpdate
 class ProjectUpdate extends StatefulWidget {
 
   final String _id;
-
+  // Конструктор класса
   ProjectUpdate({String id}) : _id = id;
 
   @override
   _ProjectUpdateState createState() => _ProjectUpdateState();
 }
 
+// Класс состояния класса ProjectUpdate
 class _ProjectUpdateState extends State<ProjectUpdate> {
 
   var project = new ProjectModel(id: null, name: null, deadlineAt: null);

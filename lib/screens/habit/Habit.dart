@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:smart_select/smart_select.dart';
 
+// Класс - Виджет экран Habit
 class Habit extends StatefulWidget {
   final String _id;
 
@@ -15,14 +16,17 @@ class Habit extends StatefulWidget {
   _HabitState createState() => _HabitState();
 }
 
+// Класс - Модель переодичность напоминаний
 class RemindItems {
+  // Кол-во секунд
   int frequency;
+  // Описание
   String name;
 
   RemindItems({this.frequency, this.name});
-
 }
 
+// Класс состояния класса Habit
 class _HabitState extends State<Habit> {
 
   var habit = new HabitModel(id: null, name: null, lifetime: null);

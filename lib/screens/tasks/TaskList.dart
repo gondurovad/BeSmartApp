@@ -10,11 +10,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:intl/intl.dart';
 
+// Класс - Виджет экран TaskList
 class TaskList extends StatefulWidget {
   @override
   _TaskListState createState() => _TaskListState();
 }
 
+// Класс состояния класса TaskList
 class _TaskListState extends State<TaskList> {
 
   var deadlineDate = DateFormat('yyyy-MM-ddT00:00:00.000').format(DateTime.now());

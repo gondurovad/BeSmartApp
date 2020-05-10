@@ -10,20 +10,20 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:smart_select/smart_select.dart';
 
-  class TaskCreate extends StatefulWidget {
+// Класс - Виджет экран TaskCreate
+class TaskCreate extends StatefulWidget {
   @override
   _TaskCreateState createState() => _TaskCreateState();
-  }
+}
 
-  class _TaskCreateState extends State<TaskCreate> {
-
+// Класс состояния класса TaskCreate
+class _TaskCreateState extends State<TaskCreate> {
   var task = new TaskModel(id: null, name: null, deadlineDate: null, deadlineTime: null);
 
   TextEditingController nameController = TextEditingController();
   TextEditingController descriptionController = TextEditingController();
 
   final _formKey = GlobalKey<FormState>();
-
 
   @override
   Widget build(BuildContext context) {
@@ -103,7 +103,7 @@ import 'package:smart_select/smart_select.dart';
                   child: DateTimeField(
                     format: DateFormat('hh:mm'),
                     validator: (value) {
-                      if (value==null) {
+                      if (value == null) {
                         return 'Выберите время';
                       }
                       return null;
@@ -141,7 +141,8 @@ import 'package:smart_select/smart_select.dart';
                           value: (index, item) => item.id,
                           title: (index, item) => item.name,
                         ),
-                        title: '${task.categoryId != null ? 'Задача отнесена к категории' : 'Выбор проекта'}',
+                        title:
+                            '${task.categoryId != null ? 'Задача отнесена к категории' : 'Выбор проекта'}',
                         placeholder: '',
                         onChange: (int value) {
                           setState(() {
@@ -155,7 +156,7 @@ import 'package:smart_select/smart_select.dart';
                         value: task.projectId,
                         modalType: SmartSelectModalType.bottomSheet,
                         choiceType: SmartSelectChoiceType.chips,
-                        enabled: task.categoryId != null ? false: true,
+                        enabled: task.categoryId != null ? false : true,
                       );
                     } else {
                       return Text('Проекты отсутствуют');
@@ -176,7 +177,8 @@ import 'package:smart_select/smart_select.dart';
                           value: (index, item) => item.id,
                           title: (index, item) => item.name,
                         ),
-                        title: '${task.projectId != null ? 'Задача отнесена к проекту' : 'Выбор категории'}',
+                        title:
+                            '${task.projectId != null ? 'Задача отнесена к проекту' : 'Выбор категории'}',
                         placeholder: '',
                         onChange: (int value) {
                           setState(() {
@@ -190,7 +192,7 @@ import 'package:smart_select/smart_select.dart';
                         value: task.categoryId,
                         modalType: SmartSelectModalType.bottomSheet,
                         choiceType: SmartSelectChoiceType.chips,
-                        enabled: task.projectId != null ? false: true,
+                        enabled: task.projectId != null ? false : true,
                       );
                     } else {
                       return Text('Категории отсутствуют');
@@ -208,7 +210,7 @@ import 'package:smart_select/smart_select.dart';
                         task.isPrimary = value;
                       });
                     },
-                    value: task.isPrimary ,
+                    value: task.isPrimary,
                   ),
                 ),
               ),

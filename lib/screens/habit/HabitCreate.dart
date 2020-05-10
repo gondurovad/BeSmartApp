@@ -6,27 +6,28 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:smart_select/smart_select.dart';
 
+// Класс - Виджет экран HabitCreate
 class HabitCreate extends StatefulWidget {
   @override
   _HabitCreateState createState() => _HabitCreateState();
 }
 
+// Класс - Модель переодичность напоминаний
 class RemindItems {
+  // Кол-во секунд
   int frequency;
+  // Описание
   String name;
 
   RemindItems({this.frequency, this.name});
-
 }
 
+// Класс состояния класса HabitCreate
 class _HabitCreateState extends State<HabitCreate> {
 
   var habit = new HabitModel(id: null, name: null, lifetime: null);
 
   TextEditingController nameController = TextEditingController();
-  TextEditingController dateTimeController = TextEditingController();
-  TextEditingController timeSinceController = TextEditingController();
-  TextEditingController timeTillController = TextEditingController();
 
   List<RemindItems> remindItems = [
     RemindItems(frequency: 1800, name : '30 мин'),

@@ -4,6 +4,8 @@ import 'package:besmart/models/ProjectModel.dart';
 import 'package:besmart/services/DatabaseService.dart';
 import 'package:sqflite/sqflite.dart';
 
+// Класс отвечающий за взаимодействие с таблицей project
+
 class ProjectService {
   ProjectService._();
 
@@ -48,20 +50,12 @@ class ProjectService {
     return list;
   }
 
-  Future<String> getAmountProjectsByCategoryId(int id) async {
-    final db = await database;
-    var active = await db.rawQuery("SELECT * FROM project WHERE category_id = ?", [id]);
-    var res = active.length != null ? (active.length).toString() : '';
-    return res;
-  }
-
   Future<List<ProjectModel>> getAll() async {
     final db = await database;
     var res = await db.query("project", orderBy: "deadline_at");
     List<ProjectModel> list = res.isNotEmpty ? res.map((c) => ProjectModel.fromJson(c)).toList() : [];
     return list;
   }
-
 
   deleteById(int id) async {
     final db = await database;

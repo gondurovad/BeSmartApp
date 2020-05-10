@@ -8,11 +8,13 @@ import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:intl/intl.dart';
 import 'package:percent_indicator/percent_indicator.dart';
 
+// Класс - Виджет экран ProjectList
 class ProjectList extends StatefulWidget {
   @override
   _ProjectListState createState() => _ProjectListState();
 }
 
+// Класс состояния класса ProjectList
 class _ProjectListState extends State<ProjectList> {
 
 

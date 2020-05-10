@@ -6,14 +6,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:intl/intl.dart';
 
+// Класс - Виджет экран HabitList
 class HabitList extends StatefulWidget {
   @override
   _HabitListState createState() => _HabitListState();
 }
 
+// Класс состояния класса HabitList
 class _HabitListState extends State<HabitList> {
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(

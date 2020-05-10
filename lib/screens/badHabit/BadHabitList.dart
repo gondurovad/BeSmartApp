@@ -7,11 +7,13 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 
+// Класс - Виджет экран BadHabit
 class BadHabitList extends StatefulWidget {
   @override
   _BadHabitListState createState() => _BadHabitListState();
 }
 
+// Класс состояния класса BadHabit
 class _BadHabitListState extends State<BadHabitList> {
 
   TextEditingController nameController = TextEditingController();
@@ -20,6 +22,7 @@ class _BadHabitListState extends State<BadHabitList> {
 
   var badHabit = new BadHabitModel(id: null, name: null, startAt: null);
 
+  // Получть даты между двумя
   List<DateTime> calculateDate(DateTime startDate, DateTime endDate) {
     List<DateTime> days = [];
     for (int i = 0; i <= endDate.difference(startDate).inDays; i++) {

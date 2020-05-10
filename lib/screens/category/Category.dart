@@ -7,8 +7,8 @@ import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:intl/intl.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
 
+// Класс - Виджет экран Category
 class Category extends StatefulWidget {
-
   final String _id;
 
   Category({String id}) : _id = id;
@@ -17,8 +17,8 @@ class Category extends StatefulWidget {
   _CategoryState createState() => _CategoryState();
 }
 
+// Класс состояния класса Category
 class _CategoryState extends State<Category> {
-
   @override
   Widget build(BuildContext context) {
     final width = ( MediaQuery.of(context).size.width).floorToDouble();

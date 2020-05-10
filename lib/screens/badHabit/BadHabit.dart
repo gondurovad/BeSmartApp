@@ -8,23 +8,21 @@ import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:intl/intl.dart';
 
+// Класс - Виджет экран BadHabit
 class BadHabit extends StatefulWidget {
-  final String _id;
 
+  final String _id;
   BadHabit({String id}) : _id = id;
 
   @override
   _BadHabitState createState() => _BadHabitState();
 }
 
+// Класс состояния класса BadHabit
 class _BadHabitState extends State<BadHabit> {
 
   var incident = new IncidentModel(id: null, incidentDate: null);
-
   var badHabit = new BadHabitModel(id: null, name: null, startAt: null);
-
-  TextEditingController nameController = TextEditingController();
-  TextEditingController dateController = TextEditingController();
 
   final _formKey = GlobalKey<FormState>();
 

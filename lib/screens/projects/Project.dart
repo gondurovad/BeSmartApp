@@ -7,20 +7,18 @@ import 'package:intl/intl.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:flutter/cupertino.dart';
 
-
+// Класс - Виджет экран Project
 class Project extends StatefulWidget {
 
   final String _id;
-
   Project({String id}) : _id = id;
 
   @override
   _ProjectState createState() => _ProjectState();
-
 }
 
+// Класс состояния класса Project
 class _ProjectState extends State<Project> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(

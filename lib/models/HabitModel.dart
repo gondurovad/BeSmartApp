@@ -11,8 +11,11 @@ class HabitModel {
   int id;
   String name;
   String lifetime;
+  // Периодичность
   int frequency;
+  // Время начала уведомлений
   String dawn;
+  // Время окончания уведомлений
   String sunset;
   int userId;
   String createdAt;
